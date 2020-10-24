@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>build.maven.all</artifactId>
+	<packaging>pom</packaging>
+	
+	<parent>
+		<groupId>dev.dietermai.sailaflash</groupId>
+		<artifactId>build.maven.base</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	
+	<modules>
+		
+		<module>../../dev.dietermai.sailaflash.api</module>
+		<module>../../dev.dietermai.sailaflash.boot</module>
+		<module>../../dev.dietermai.sailaflash.bl</module>
+		<module>../../dev.dietermai.sailaflash.ui.jfx</module>
+	<!-- 	<module>../../dev.dietermai.sailaflash.ui.cli</module> -->
+	</modules>
+
+	
+</project>
