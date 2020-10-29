@@ -2,8 +2,10 @@ package dev.dietermai.sailaflash.ui.jfx;
 
 import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.ui.jfx.app.JavaFxApplication;
+import dev.dietermai.sailaflash.ui.jfx.inject.Context;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreenProvider;
+import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
 
 public enum JfxBoot {
 	instance;
@@ -15,13 +17,7 @@ public enum JfxBoot {
 		programmArgs = args.clone();
 		
 		Context context = Context.getInstance();
-		context.setBlService(blService);
-		
-		MainScreenProvider screenProvider = new MainScreenProvider();
-		ScreenSM mainScreenSM = new ScreenSM(screenProvider);
-
-		
-		context.setMainScreenSM(mainScreenSM);
+		context.set(blService);
 	}
 
 	public void start() {

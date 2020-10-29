@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dev.dietermai.sailaflash</groupId>
-	<artifactId>build.maven.base</artifactId>
+	<artifactId>sailaflash.build.base</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 

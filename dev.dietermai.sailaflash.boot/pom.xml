@@ -3,15 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>dev.dietermai.sailaflash.boot</artifactId>
-	
 	<parent>
 		<groupId>dev.dietermai.sailaflash</groupId>
 		<artifactId>build.maven.base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../build.maven</relativePath>
+		<relativePath>..</relativePath>
 	</parent>
-	
+
+	<artifactId>sailaflash.boot</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -21,26 +20,20 @@
 		</dependency>
 		<dependency>
 			<groupId>dev.dietermai.sailaflash</groupId>
-			<artifactId>dev.dietermai.sailaflash.bl</artifactId>
+			<artifactId>sailaflash.bl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>dev.dietermai.sailaflash</groupId>
-			<artifactId>dev.dietermai.sailaflash.ui.jfx</artifactId>
+			<artifactId>sailaflash.ui.jfx</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
-		
+
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>29.0-jre</version>
 		</dependency>
-	</dependencies> 
-
-	
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-	</build>
+	</dependencies>
 </project>

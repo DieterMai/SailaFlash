@@ -3,10 +3,10 @@
  */
 package dev.dietermai.sailaflash.ui.jfx.app;
 
-import dev.dietermai.sailaflash.ui.jfx.Context;
 import dev.dietermai.sailaflash.ui.jfx.JfxBoot;
+import dev.dietermai.sailaflash.ui.jfx.inject.Context;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
-import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreen;
+import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreenProvider;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
 import dev.dietermai.sailaflash.ui.jfx.service.JavaFxUiService;
 import dev.dietermai.sailaflash.ui.jfx.util.LoggingHelper;
@@ -48,7 +48,8 @@ public class JavaFxApplication extends Application {
 		LoggingHelper.instance.setStage(primaryStage);
 
 		
-        ScreenSM<MainScreens> screenSM = context.getMainScreenSM();
+		var screenProvider = new MainScreenProvider();
+		var screenSM = new ScreenSM<MainScreens>(screenProvider);
         screenSM.initialize();
         
         
