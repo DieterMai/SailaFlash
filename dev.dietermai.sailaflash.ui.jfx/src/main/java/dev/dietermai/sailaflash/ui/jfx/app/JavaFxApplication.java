@@ -3,8 +3,6 @@
  */
 package dev.dietermai.sailaflash.ui.jfx.app;
 
-import dev.dietermai.sailaflash.ui.jfx.JfxBoot;
-import dev.dietermai.sailaflash.ui.jfx.inject.Context;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreenProvider;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
@@ -27,13 +25,10 @@ public class JavaFxApplication extends Application {
 		service.start();
 	}
 	
-	private Context context;
-	
 	@Override
 	public void init() throws Exception {
 		super.init();
 		System.out.println("JavaFxApplication.init()");
-		context = JfxBoot.instance.getContext();
 	}
 	
 	@Override

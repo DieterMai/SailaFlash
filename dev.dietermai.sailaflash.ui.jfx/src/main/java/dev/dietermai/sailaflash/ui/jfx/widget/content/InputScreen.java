@@ -2,6 +2,8 @@ package dev.dietermai.sailaflash.ui.jfx.widget.content;
 
 import static dev.dietermai.sailaflash.ui.jfx.widget.content.ContentConstants.CONTENT_screenBackground;
 
+import dev.dietermai.sailaflash.ui.jfx.action.SaveAction;
+import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
 import dev.dietermai.sailaflash.ui.jfx.screen.IScreen;
 import dev.dietermai.sailaflash.ui.jfx.widget.input.InputAnswer;
 import dev.dietermai.sailaflash.ui.jfx.widget.input.InputCardMetaSection;
@@ -35,9 +37,9 @@ public class InputScreen implements IScreen {
 	}
 	
 	private Node createCardSection() {
-		Node metaBox = new InputCardMetaSection().initialize().getRoot();
-		Node questionBox = new InputQuestion().initialize().getRoot();
-		Node answerBox = new InputAnswer().initialize().getRoot();
+		Node metaBox = PMI.pmi.create(InputCardMetaSection.class).initialize().getRoot();
+		Node questionBox = PMI.pmi.create(InputQuestion.class).initialize().getRoot();
+		Node answerBox = PMI.pmi.create(InputAnswer.class).initialize().getRoot();
 		
 		HBox.setHgrow(questionBox, Priority.ALWAYS);
 		HBox.setHgrow(answerBox, Priority.ALWAYS);
@@ -51,20 +53,15 @@ public class InputScreen implements IScreen {
 	}
 	
 	private Node createSaveSection() {
-		
 		Button saveButton = new Button("Save and Next");
-		saveButton.setOnAction(actionEvent -> saveAction());
+		saveButton.setOnAction(actionEvent -> PMI.pmi.get(SaveAction.class).execute());
+//		saveButton.onActionProperty()
 		
-		
-		HBox mainHBox = new HBox(5);
+		HBox mainHBox =new HBox(5);
 		mainHBox.setAlignment(Pos.CENTER_RIGHT);
 		mainHBox.getChildren().add(saveButton);
 		
 		return mainHBox;
-	}
-	
-	private void saveAction() {
-		
 	}
 	
 	

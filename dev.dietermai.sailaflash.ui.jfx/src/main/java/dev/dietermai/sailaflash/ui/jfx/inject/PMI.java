@@ -1,31 +1,29 @@
 package dev.dietermai.sailaflash.ui.jfx.inject;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
-import dev.dietermai.sailaflash.api.service.IBlService;
-import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
-import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
 
-public class Context {
-	private static final Context instance = new Context();
+public enum PMI {
+	pmi;
 	
-	public static Context getInstance() {
-		return instance;
-	}
 	
 	private record Tuple(Class<?> clazz, Keys key) {}
-
+	
 	private final Map<Class<?>, Object> oneMap = new HashMap<>();
 	private final Map<Tuple, Object> multiMap = new HashMap<>();
 	
 	
-//	private IBlService blService;
-//	private ScreenSM<MainScreens> mainScreenSM;
-	
 	@SuppressWarnings("unchecked")
 	public <T> T get(Class<T> clazz) {
-		return (T) oneMap.get(clazz);
+		T t = (T) oneMap.get(clazz);
+		if(t == null) {
+			return create(clazz);
+		}else {
+			return t;
+		}
 	}
 	
 	public void set(Object o) {
@@ -39,6 +37,20 @@ public class Context {
 	
 	public void set(Keys key, Object instance) {
 		multiMap.put(new Tuple(instance.getClass(), key), instance);
+	}
+	
+	
+	public <T> T create(Class<T> clazz) {
+		try {
+			Constructor<T> consturctor = clazz.getConstructor();
+			T instance = consturctor.newInstance();
+			set(instance);
+			return instance;
+		}catch(NoSuchMethodException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			System.err.println("exception for class "+clazz.getSimpleName());
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	
