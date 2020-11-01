@@ -24,7 +24,7 @@ public class InputQuestion extends Widget<InputQuestion>{
 	public InputQuestion initialize() {
 		Label title = new Label("Enter Question");
 		TextArea questionTestArea = new TextArea();
-		questionTestArea.textProperty().bind(text);
+		text.bind(questionTestArea.textProperty());
 		
 		VBox.setVgrow(questionTestArea, Priority.ALWAYS);
 		

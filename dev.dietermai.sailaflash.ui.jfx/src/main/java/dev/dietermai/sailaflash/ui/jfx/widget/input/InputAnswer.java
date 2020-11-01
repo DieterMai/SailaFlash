@@ -23,8 +23,7 @@ public class InputAnswer extends Widget<InputAnswer>{
 	public InputAnswer initialize() {
 		Label title = new Label("Enter Answer");
 		TextArea anwerTestArea = new TextArea();
-		
-		anwerTestArea.textProperty().bind(text);
+		text.bind(anwerTestArea.textProperty());
 		
 		VBox.setVgrow(anwerTestArea, Priority.ALWAYS);
 		

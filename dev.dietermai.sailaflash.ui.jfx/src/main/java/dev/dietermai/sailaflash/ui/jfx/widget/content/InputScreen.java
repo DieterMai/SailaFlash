@@ -54,8 +54,7 @@ public class InputScreen implements IScreen {
 	
 	private Node createSaveSection() {
 		Button saveButton = new Button("Save and Next");
-		saveButton.setOnAction(actionEvent -> PMI.pmi.get(SaveAction.class).execute());
-//		saveButton.onActionProperty()
+		saveButton.setOnAction(PMI.pmi.get(SaveAction.class));
 		
 		HBox mainHBox =new HBox(5);
 		mainHBox.setAlignment(Pos.CENTER_RIGHT);

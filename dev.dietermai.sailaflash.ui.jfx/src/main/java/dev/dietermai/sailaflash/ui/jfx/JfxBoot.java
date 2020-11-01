@@ -3,9 +3,6 @@ package dev.dietermai.sailaflash.ui.jfx;
 import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.ui.jfx.app.JavaFxApplication;
 import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
-import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
-import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreenProvider;
-import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
 
 public enum JfxBoot {
 	instance;
