@@ -2,11 +2,8 @@ package dev.dietermai.sailaflash.ui.jfx.screen;
 
 import java.util.LinkedList;
 
-import dev.dietermai.sailaflash.ui.jfx.util.FxUtil;
-import dev.dietermai.sailaflash.ui.jfx.util.LoggingHelper;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 
 public class ScreenSM<T extends IScreenGroup<T>> {
 	private final LinkedList<IScreen> screenHistory = new LinkedList<>();

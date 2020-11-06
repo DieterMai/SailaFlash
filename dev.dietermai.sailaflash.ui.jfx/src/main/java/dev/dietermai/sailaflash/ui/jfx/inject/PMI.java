@@ -30,6 +30,10 @@ public enum PMI {
 		oneMap.put(o.getClass(), o);
 	}
 	
+	public <K,V extends K> void set(Class<K> key, V value) {
+		oneMap.put(key, value);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public <T> T get(Class<T> clazz, Keys key) {
 		return (T) multiMap.get(new Tuple(clazz, key));
@@ -52,13 +56,4 @@ public enum PMI {
 			return null;
 		}
 	}
-	
-	
-//	//@formatter:off
-//	public IBlService getBlService() { return blService; }
-//	public void setBlService(IBlService blService) { this.blService = blService; }
-//	
-//	public ScreenSM<MainScreens> getMainScreenSM() {	return mainScreenSM; }
-//	public void setMainScreenSM(ScreenSM<MainScreens> mainScreenSM) { this.mainScreenSM = mainScreenSM; }
-//	//@formatter:on
 }

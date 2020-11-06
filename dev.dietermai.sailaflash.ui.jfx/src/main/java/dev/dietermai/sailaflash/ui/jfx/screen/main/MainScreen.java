@@ -104,9 +104,7 @@ public class MainScreen implements IScreen {
 		navigationIndicator.setSelectionBoundsProperty(navigationBar.selectedPageBounds());
 		navigationIndicator.setHoverBoundsProperty(navigationBar.hoverPageBounds());
 		
-		
 		Node content = createContent();
-		
 		
 		VBox lowerSpace = new VBox();
 		lowerSpace.setBackground(FxUtil.getBg(COLOR_LowerSpace));

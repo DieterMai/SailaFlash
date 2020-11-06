@@ -8,12 +8,10 @@ public enum JfxBoot {
 	instance;
 	
 	private String[] programmArgs;
-	private IBlService blService;
 	
 	public void initialize(String[] args) {
 		programmArgs = args.clone();
 		
-		PMI.pmi.set(blService);
 	}
 
 	public void start() {
@@ -21,6 +19,7 @@ public enum JfxBoot {
 	}
 
 	public void setBlService(IBlService blService) {
-		this.blService = blService;
+		PMI.pmi.set(IBlService.class, blService);
 	}
+	
 }

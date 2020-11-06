@@ -3,6 +3,8 @@
  */
 package dev.dietermai.sailaflash.ui.jfx.app;
 
+import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
+import dev.dietermai.sailaflash.ui.jfx.inject.Keys;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreenProvider;
 import dev.dietermai.sailaflash.ui.jfx.screen.main.MainScreens;
@@ -25,6 +27,7 @@ public class JavaFxApplication extends Application {
 		service.start();
 	}
 	
+	
 	@Override
 	public void init() throws Exception {
 		super.init();
@@ -42,9 +45,8 @@ public class JavaFxApplication extends Application {
 		System.out.println("JavaFxApplication.start() START");
 		LoggingHelper.instance.setStage(primaryStage);
 
-		
-		var screenProvider = new MainScreenProvider();
-		var screenSM = new ScreenSM<MainScreens>(screenProvider);
+		MainScreenProvider mainScreenProvider = PMI.pmi.get(MainScreenProvider.class);
+		ScreenSM<MainScreens> screenSM = new ScreenSM<>(mainScreenProvider);
         screenSM.initialize();
         
         
@@ -52,7 +54,7 @@ public class JavaFxApplication extends Application {
         LoggingHelper.instance.setScene(scene);
 		
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("SailaFlash");
         primaryStage.setScene(scene);
         primaryStage.show();
         
