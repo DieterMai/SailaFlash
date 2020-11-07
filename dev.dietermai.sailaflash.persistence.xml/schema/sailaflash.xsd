@@ -73,7 +73,6 @@
 	<xs:group name="RichText">
 		<xs:choice>
 			<xs:element name="text" type="Text" />
-			<xs:element name="lineBreak" type="LineBreak" />
 			<xs:element name="image" type="Image" />
 			<xs:element name="audio" type="Audio" />
 			<xs:element name="video" type="Video" />
@@ -81,8 +80,6 @@
 	</xs:group>
 
 	<xs:complexType name="Text"></xs:complexType>
-
-	<xs:complexType name="LineBreak"></xs:complexType>
 
 	<xs:complexType name="Image"></xs:complexType>
 

@@ -1,5 +1,6 @@
 package dev.dietermai.sailaflash.api.service;
 
+import dev.dietermai.sailaflash.api.bl.ICardStore;
 
 /**
  * @author Dieter
@@ -7,4 +8,6 @@ package dev.dietermai.sailaflash.api.service;
  */
 public interface IBlService extends IService{
 	void setPersistenceService(IPersistenceService persistenceService);
+
+	ICardStore getCardStore();
 }

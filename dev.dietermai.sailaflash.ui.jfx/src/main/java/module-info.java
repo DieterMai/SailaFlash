@@ -10,6 +10,7 @@ module dev.dietermai.sailaflash.ui.jfx {
 	
 	// required from SailaFlash
 	requires transitive dev.dietermai.sailaflash.api;
+//	requires dev.dietermai.sailaflash.bl;
 
 	// required from JDK
 	requires java.base;
