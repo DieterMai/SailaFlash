@@ -8,83 +8,8 @@
 	</xs:complexType>
 
 	<xs:complexType name="Cards">
-		<xs:sequence>
-			<xs:group ref="CardType" maxOccurs="unbounded" />
-		</xs:sequence>
 	</xs:complexType>
 
-	<xs:group name="CardType">
-		<xs:choice>
-			<xs:element name="simpelCard" type="SimpleCard" />
-			<xs:element name="multiCard" type="MultiCard" />
-		</xs:choice>
-	</xs:group>
 
-	<xs:complexType name="CardBase">
-		<xs:attribute name="id" type="xs:string" />
-	</xs:complexType>
-
-	<xs:complexType name="SimpleCard">
-		<xs:complexContent>
-			<xs:extension base="CardBase">
-				<xs:sequence>
-					<xs:element name="question" type="Question" minOccurs="1" maxOccurs="1" />
-					<xs:element name="answer" type="Answer" minOccurs="1" maxOccurs="1" />
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="MultiCard">
-		<xs:complexContent>
-			<xs:extension base="CardBase"></xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="Question">
-		<xs:group ref="RichText" maxOccurs="unbounded" />
-	</xs:complexType>
-
-	<xs:complexType name="Answer">
-		<xs:group ref="AnswerType" />
-	</xs:complexType>
-
-	<xs:group name="AnswerType">
-		<xs:choice>
-			<xs:element name="richTextAnswer" type="RichTextAnswer" />
-			<xs:element name="multiChoiceAnswer" type="MultiChoiceAnswer" />
-		</xs:choice>
-	</xs:group>
-
-	<xs:complexType name="RichTextAnswer">
-		<xs:group ref="RichText" maxOccurs="unbounded" />
-	</xs:complexType>
-
-	<xs:complexType name="MultiChoiceAnswer">
-		<xs:sequence>
-			<xs:element name="choice" type="Choice" minOccurs="1" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Choice">
-		<xs:group ref="RichText" minOccurs="1" maxOccurs="unbounded" />
-	</xs:complexType>
-
-	<xs:group name="RichText">
-		<xs:choice>
-			<xs:element name="text" type="Text" />
-			<xs:element name="image" type="Image" />
-			<xs:element name="audio" type="Audio" />
-			<xs:element name="video" type="Video" />
-		</xs:choice>
-	</xs:group>
-
-	<xs:complexType name="Text"></xs:complexType>
-
-	<xs:complexType name="Image"></xs:complexType>
-
-	<xs:complexType name="Audio"></xs:complexType>
-
-	<xs:complexType name="Video"></xs:complexType>
 
 </xs:schema>
