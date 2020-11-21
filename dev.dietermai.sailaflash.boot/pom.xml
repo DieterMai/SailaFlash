@@ -18,7 +18,7 @@
 			<artifactId>sailaflash.api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>dev.dietermai.sailaflash</groupId>
 			<artifactId>sailaflash.bl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -45,6 +45,6 @@
 			<groupId>dev.dietermai.sailaflash</groupId>
 			<artifactId>sailaflash.persistence.xml</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 </project>
