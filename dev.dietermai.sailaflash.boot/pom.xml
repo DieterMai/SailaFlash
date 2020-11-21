@@ -18,7 +18,13 @@
 			<artifactId>sailaflash.api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-<!-- 		<dependency>
+
+		<dependency>
+			<groupId>dev.dietermai.sailaflash</groupId>
+			<artifactId>sailaflash.persistence.xml</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>dev.dietermai.sailaflash</groupId>
 			<artifactId>sailaflash.bl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -28,23 +34,5 @@
 			<artifactId>sailaflash.ui.jfx</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>29.0-jre</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.4.0-b180830.0359</version>
-		</dependency>
-		<dependency>
-			<groupId>dev.dietermai.sailaflash</groupId>
-			<artifactId>sailaflash.persistence.xml</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
 	</dependencies>
 </project>

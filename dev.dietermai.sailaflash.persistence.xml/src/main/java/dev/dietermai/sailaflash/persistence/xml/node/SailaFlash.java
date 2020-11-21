@@ -1,9 +1,6 @@
 package dev.dietermai.sailaflash.persistence.xml.node;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public record SailaFlash() {

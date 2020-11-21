@@ -1,10 +1,9 @@
 package dev.dietermai.sailaflash.persistence.xml;
 
-import javax.xml.bind.JAXB;
-
 import dev.dietermai.sailaflash.api.model.CardData;
 import dev.dietermai.sailaflash.api.service.IPersistenceService;
 import dev.dietermai.sailaflash.persistence.xml.node.SailaFlash;
+import jakarta.xml.bind.JAXB;
 
 public class XmlPersistenceSpi implements IPersistenceService {
 
