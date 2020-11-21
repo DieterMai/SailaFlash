@@ -1,4 +1,8 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://dietermai.sailaflash.dev/1.0.0" elementFormDefault="qualified" targetNamespace="http://dietermai.sailaflash.dev/1.0.0">
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://dietermai.sailaflash.dev/1.0.0" 
+	elementFormDefault="qualified" 
+	targetNamespace="http://dietermai.sailaflash.dev/1.0.0">
 	<xs:element name="sailaflash" type="Sailaflash" />
 
 	<xs:complexType name="Sailaflash">
