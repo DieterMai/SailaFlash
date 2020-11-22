@@ -14,6 +14,6 @@ public class CardStore implements ICardStore {
 	
 	@Override
 	public void createNewSimpleCard(CardData cardData) {
-		persistence.saveNewSimpleCard(cardData);
+//		persistence.saveNewSimpleCard(cardData);
 	}
 }
