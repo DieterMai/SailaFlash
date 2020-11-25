@@ -3,17 +3,26 @@
 	xmlns="http://dietermai.sailaflash.dev/1.0.0" 
 	elementFormDefault="qualified" 
 	targetNamespace="http://dietermai.sailaflash.dev/1.0.0">
-	<xs:element name="sailaflash" type="Sailaflash" />
+	<xs:element name="sailaflash" type="sailaflash" />
 
-	<xs:complexType name="Sailaflash">
+	<xs:complexType name="sailaflash">
 		<xs:all>
 			<xs:element name="cards" type="Cards" />
 		</xs:all>
 	</xs:complexType>
 
 	<xs:complexType name="Cards">
+	
 	</xs:complexType>
 
+	<xs:group name="cardType">
+		<xs:choice>
+			<xs:element name="simplecard" type="SimpleCard" />
+		</xs:choice>
+	</xs:group>
 
+	<xs:complexType name="SimpleCard">
+	
+	</xs:complexType>
 
 </xs:schema>

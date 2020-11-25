@@ -7,7 +7,7 @@ import dev.dietermai.sailaflash.api.bl.ICardStore;
  *
  */
 public interface IBlService extends IService{
-	void setPersistenceService(IPersistenceService persistenceService);
+	void setPersistence(IPersistenceService persistenceService);
 
 	ICardStore getCardStore();
 }

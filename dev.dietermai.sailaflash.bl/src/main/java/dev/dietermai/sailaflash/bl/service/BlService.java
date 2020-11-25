@@ -18,14 +18,14 @@ public class BlService implements IBlService {
 	private IPersistenceService persistence;
 	
 	@Override
-	public void setPersistenceService(IPersistenceService persistenceService) {
+	public void setPersistence(IPersistenceService persistenceService) {
 		this.persistence = persistenceService;
 	}
 	
 	@Override
 	public void initialize(String[] args) {
 		cardStore = new CardStore();
-		cardStore.setPersistence(persistence);
+		cardStore.setPersistence(persistence.getPersistence());
 	}
 
 	@Override
@@ -33,8 +33,6 @@ public class BlService implements IBlService {
 		System.out.println("BlService.start()");
 	}
 
-	
-	
 	@Override
 	public ICardStore getCardStore() {
 		return cardStore;

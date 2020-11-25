@@ -26,7 +26,7 @@ public class SailaFlashMain {
 		var blService = fetchService(IBlService.class);
 		var uiService = fetchService(IUiService.class);
 		
-		blService.setPersistenceService(persistenceService);
+		blService.setPersistence(persistenceService);
 		uiService.setBlService(blService);
 		
 		
@@ -39,24 +39,6 @@ public class SailaFlashMain {
 		uiService.start();
 	}
 	
-	private IBlService startBlService() {
-		IBlService blService = fetchService(IBlService.class);
-		
-		blService.initialize(args);
-		blService.start();
-		
-		return blService;
-	}
-	
-	private IUiService startUiService(IBlService blService) {
-		IUiService uiService = fetchService(IUiService.class);
-		
-		uiService.setBlService(blService);
-		uiService.initialize(args);
-		uiService.start();
-		
-		return uiService;
-	}
 	
 	private <T extends IService> T fetchService(Class<T> serviceClass) {
 		ServiceLoader<T> serviceLoader = ServiceLoader.load(serviceClass);

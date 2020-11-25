@@ -2,14 +2,14 @@ package dev.dietermai.sailaflash.bl.store;
 
 import dev.dietermai.sailaflash.api.bl.ICardStore;
 import dev.dietermai.sailaflash.api.model.CardData;
-import dev.dietermai.sailaflash.api.service.IPersistenceService;
+import dev.dietermai.sailaflash.api.persistence.IPersistence;
 
 public class CardStore implements ICardStore {
 
-	private IPersistenceService persistence;
+	private IPersistence persistenceFacade;
 	
-	public void setPersistence(IPersistenceService persistence) {
-		this.persistence = persistence;
+	public void setPersistence(IPersistence persistenceFacade) {
+		this.persistenceFacade = persistenceFacade;
 	}
 	
 	@Override
