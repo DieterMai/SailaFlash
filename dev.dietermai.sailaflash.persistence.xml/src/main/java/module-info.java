@@ -1,6 +1,6 @@
 module dev.dietermai.sailaflash.persistence.xml {
 	exports dev.dietermai.sailaflash.persistence.xml.spi;
-	exports dev.dietermai.sailaflash.persistence.xml.spi.node;
+	exports dev.dietermai.sailaflash.persistence.xml.node;
 
 	requires transitive dev.dietermai.sailaflash.api;
 	requires java.xml;
@@ -8,5 +8,5 @@ module dev.dietermai.sailaflash.persistence.xml {
 	
 	provides dev.dietermai.sailaflash.api.service.IPersistenceService with dev.dietermai.sailaflash.persistence.xml.spi.XmlPersistenceSpi;
 	
-	opens dev.dietermai.sailaflash.persistence.xml.spi.node;
+	opens dev.dietermai.sailaflash.persistence.xml.node;
 }

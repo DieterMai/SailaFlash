@@ -1,16 +1,14 @@
 package dev.dietermai.sailaflash.persistence.xml.spi;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import dev.dietermai.sailaflash.api.model.CardData;
 import dev.dietermai.sailaflash.api.persistence.IPersistence;
-import dev.dietermai.sailaflash.persistence.xml.spi.node.SailaFlash;
-import dev.dietermai.sailaflash.persistence.xml.spi.node.SimpleCard;
+import dev.dietermai.sailaflash.persistence.xml.node.Sailaflash;
+import dev.dietermai.sailaflash.persistence.xml.node.Sailaflash;
+import dev.dietermai.sailaflash.persistence.xml.node.SimpleCard;
 import jakarta.xml.bind.JAXB;
 
 public class XmlPersistenceFacade implements IPersistence{
@@ -25,7 +23,7 @@ public class XmlPersistenceFacade implements IPersistence{
 	}
 	
 	private void initializeCardDocument() {
-		var sailaFlash = new SailaFlash();
+		var sailaFlash = new Sailaflash();
 		var simpleCard1 = new SimpleCard();
 		var simpleCard2 = new SimpleCard();
 		

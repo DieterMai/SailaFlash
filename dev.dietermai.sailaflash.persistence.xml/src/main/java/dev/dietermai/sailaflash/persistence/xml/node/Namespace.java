@@ -1,4 +1,4 @@
-package dev.dietermai.sailaflash.persistence.xml.spi.node;
+package dev.dietermai.sailaflash.persistence.xml.node;
 
 public enum Namespace {
 	;
