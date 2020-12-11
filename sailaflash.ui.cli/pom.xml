@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>sailaflash.ui.cli</artifactId>
+	
+	<parent>
+		<groupId>dev.dietermai.sailaflash</groupId>
+		<artifactId>build.maven.base</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../build.maven</relativePath>
+	</parent>
+
+	<name>Saila Flash CLI</name>
+	<description>Command line version of Saila Falsh</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>dev.dietermai.sailaflash</groupId>
+			<artifactId>sailaflash.api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+		<dependency> 
+			<groupId>com.guicedee.services</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1.0.13.2-jre14</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>29.0-jre</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.2.3</version>
+			<exclusions>
+				<!-- exclude default javax.inject because the version that Guice has in its POM is not fit for modules. -->
+				<exclusion>
+					<groupId>javax.inject</groupId>
+      				<artifactId>javax.inject</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+	</build>
+
+
+</project>

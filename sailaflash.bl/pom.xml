@@ -1,32 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>dev.dietermai.sailaflash</groupId>
 		<artifactId>sailaflash.build.base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
+		<relativePath>../build.maven</relativePath>
 	</parent>
 
-	<artifactId>build.maven.all</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>sailaflash.bl</artifactId>
 	
-
-	
-	<modules>
-		<module>../../sailaflash.api</module>
-		<module>../../sailautil</module>
-		
-		
-		<module>../../sailaflash.boot</module>
-		<module>../../sailaflash.persistence.xml</module>
-		<module>../../sailaflash.bl</module>
-		<module>../../sailaflash.ui.jfx</module>
-		
-		
-	</modules>
-
-	
+	<dependencies> 
+		<dependency>
+			<groupId>dev.dietermai.sailaflash</groupId>
+			<artifactId>sailaflash.api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
