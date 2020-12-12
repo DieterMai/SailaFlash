@@ -1,6 +1,12 @@
 @echo off
 
-echo execute build.cmd in %cd%
+set this=[%~nx0]
+set thidDir=%~dp0
+set owd=%cd%
+
+echo executing: %this%
+echo %this% parent: %thidDir%
+echo %this% parameter: %*
 
 SETLOCAL EnableDelayedExpansion
 
@@ -12,12 +18,12 @@ if "%1" == "" (
 	if /I "%1" EQU "-p" (
 		:: TODO Error handling: validate %2
 		shift
-		echo module path is: %2
+		echo %this% module path is: %2
 		set modulePath=-p %2
 		shift
 		goto parameterParsingStart 
 	)
-	echo unknown parameter: %1
+	echo %this% unknown parameter: %1
 	goto EOF
 )
 
@@ -28,19 +34,20 @@ goto parameterParsingStart
 :parameterParsingEnd
 
 
-echo Collecting source files
+echo %this% Collecting source files
+
 
 set sourceFiles=
 for /f %%f in ('dir /s/b "src\main\java\*.java"') do set sourceFiles=!sourceFiles! %%f
 
-echo Done with collecting source files. 
+echo %this% Done with collecting source files. 
 echo.
 
 set buildDestination=.\build.batch
 
-echo source files: %sourceFiles%
-echo build destination: "%buildDestination%"
-echo modulePath: %modulePath%
+echo %this% source files: %sourceFiles%
+echo %this% build destination: "%buildDestination%"
+echo %this% modulePath: %modulePath%
 
 
 echo build compile command
@@ -52,10 +59,16 @@ set buildCommand=%buildCommand% -verbose
 set buildCommand=%buildCommand% %modulePath%
 set buildCommand=%buildCommand% %sourceFiles%
 
-echo final compile command is:
+echo %this% final compile command is:
 echo     %buildCommand%
 
-echo execute compile command
+echo %this%  execute compile command
 call %buildCommand%
+
+if ERRORLEVEL 0 (
+	echo %this% Compilation succesful
+) else (
+	echo %this% Compilation faild. Errorcode %ERRORLEVEL%
+)
 
 :EOF
