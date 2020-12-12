@@ -25,4 +25,9 @@ public class XmlPersistenceSpi implements IPersistenceService {
 		return facade;
 	}
 
+	@Override
+	public void shutdown() {
+		facade.shutdown();
+	}
+
 }

@@ -10,4 +10,6 @@ public interface IBlService extends IService{
 	void setPersistence(IPersistenceService persistenceService);
 
 	ICardStore getCardStore();
+	
+	void shutdown();
 }

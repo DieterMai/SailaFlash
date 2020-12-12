@@ -37,5 +37,10 @@ public class BlService implements IBlService {
 	public ICardStore getCardStore() {
 		return cardStore;
 	}
+
+	@Override
+	public void shutdown() {
+		persistence.shutdown();
+	}
 	
 }

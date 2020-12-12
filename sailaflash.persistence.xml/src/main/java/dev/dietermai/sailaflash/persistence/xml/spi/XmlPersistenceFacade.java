@@ -12,6 +12,7 @@ import dev.dietermai.sailautil.dispatch.DebounceJob;
 import dev.dietermai.sailautil.dispatch.JobExecutor;
 
 public class XmlPersistenceFacade implements IPersistence{
+	// TODO the faced imple should only have accessor methods. It should not initialize fields
 	private JobExecutor executor;
 	
 	private DebounceJob saveTrigger;
@@ -34,5 +35,10 @@ public class XmlPersistenceFacade implements IPersistence{
 	public void addCard(CardData cardData) {
 		executor.addJob(new AddCardJob(cardData));
 		saveTrigger.trigger();
+	}
+
+	public void shutdown() {
+		saveTrigger.triggerNowIfPending();
+		executor.shutdown();
 	}
 }

@@ -6,6 +6,7 @@ package dev.dietermai.sailaflash.ui.jfx.app;
 import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
 import dev.dietermai.sailaflash.ui.jfx.main.MainScreenProvider;
 import dev.dietermai.sailaflash.ui.jfx.main.MainScreens;
+import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.ui.jfx.inject.Keys;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
 import dev.dietermai.sailaflash.ui.jfx.service.JavaFxUiService;
@@ -38,6 +39,10 @@ public class JavaFxApplication extends Application {
 	public void stop() throws Exception {
 		super.stop();
 		System.out.println("JavaFxApplication.stop()");
+		IBlService bl = PMI.pmi.get(IBlService.class);
+		if(bl != null) {
+			bl.shutdown();
+		}
 	}
 
 	@Override

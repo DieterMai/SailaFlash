@@ -21,9 +21,32 @@ public class DebounceJob<T> {
 	}
 	
 	public JobAccess<T> trigger(){
-		if(jobAccess != null ) {
+		cancel();
+		return jobAccess = dispatcher.addJob(payload, silencePeriode);
+	}
+	
+	public void cancel() {
+		if(jobAccess != null) {
 			jobAccess.getFuture().cancel(false);
 		}
-		return jobAccess = dispatcher.addJob(payload, silencePeriode);
+	}
+	
+	public JobAccess<T> triggerNow() {
+		cancel();
+		return jobAccess = dispatcher.addJob(payload);
+	}
+
+	public void triggerNowIfPending() {
+		if(isPending()) {
+			triggerNow();
+		}
+	}
+	
+	public boolean isPending() {
+		if(jobAccess != null && !jobAccess.getFuture().isDone()) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
