@@ -7,8 +7,8 @@ import dev.dietermai.sailaflash.persistence.xml.node.Answer;
 import dev.dietermai.sailaflash.persistence.xml.node.ObjectFactory;
 import dev.dietermai.sailaflash.persistence.xml.node.Question;
 import dev.dietermai.sailaflash.persistence.xml.node.Sailaflash;
-import dev.dietermai.sailaflash.persistence.xml.node.Side;
 import dev.dietermai.sailaflash.persistence.xml.node.SimpleCard;
+import dev.dietermai.sailaflash.persistence.xml.node.Text;
 import jakarta.xml.bind.JAXB;
 
 public enum CardsFile {
@@ -41,24 +41,20 @@ public enum CardsFile {
 		SimpleCard newCard = factory.createSimpleCard();
 		Question question = factory.createQuestion();
 		newCard.setQuestion(question);
-		question.setSide(createSimpleSide(factory, cardData.question()));
+		question.setText(createSimpleSide(factory, cardData.question()));
 		
 		Answer answer = factory.createAnswer();
 		newCard.setAnswer(answer);
-		answer.setSide(createSimpleSide(factory, cardData.answer()));
+		answer.setText(createSimpleSide(factory, cardData.answer()));
 		
 		
 		model.getCards().getCardGroup().add(newCard);
 	}
 	
-	private Side createSimpleSide(ObjectFactory factory, String s) {
-		var side = factory.createSide();
-		var richText = factory.createRichText();
+	private Text createSimpleSide(ObjectFactory factory, String s) {
 		var text = factory.createText();
 		
-		side.setRichtext(richText);
-		richText.setText(text);
 		text.setText(s);
-		return side;
+		return text;
 	}
 }

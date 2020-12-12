@@ -17,7 +17,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="side" type="{http://dietermai.sailaflash.dev/1.0.0}Side"/&gt;
+ *         &lt;element name="text" type="{http://dietermai.sailaflash.dev/1.0.0}Text"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -28,35 +28,35 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Question", propOrder = {
-    "side"
+    "text"
 })
 public class Question {
 
     @XmlElement(required = true)
-    protected Side side;
+    protected Text text;
 
     /**
-     * Gets the value of the side property.
+     * Gets the value of the text property.
      * 
      * @return
      *     possible object is
-     *     {@link Side }
+     *     {@link Text }
      *     
      */
-    public Side getSide() {
-        return side;
+    public Text getText() {
+        return text;
     }
 
     /**
-     * Sets the value of the side property.
+     * Sets the value of the text property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Side }
+     *     {@link Text }
      *     
      */
-    public void setSide(Side value) {
-        this.side = value;
+    public void setText(Text value) {
+        this.text = value;
     }
 
 }

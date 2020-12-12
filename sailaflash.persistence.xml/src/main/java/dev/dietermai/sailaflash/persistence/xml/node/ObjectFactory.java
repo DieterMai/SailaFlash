@@ -90,22 +90,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Side }
-     * 
-     */
-    public Side createSide() {
-        return new Side();
-    }
-
-    /**
-     * Create an instance of {@link RichText }
-     * 
-     */
-    public RichText createRichText() {
-        return new RichText();
-    }
-
-    /**
      * Create an instance of {@link Text }
      * 
      */

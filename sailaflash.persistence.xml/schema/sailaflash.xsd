@@ -52,28 +52,16 @@
 	
 	<xs:complexType name="Question">
 		<xs:sequence>
-			<xs:element name="side" type="Side" />
+			<xs:element name="text" type="Text" />
 		</xs:sequence>
 	</xs:complexType>
 	
 	<xs:complexType name="Answer">
 		<xs:sequence>
-			<xs:element name="side" type="Side" />
-		</xs:sequence>
-	</xs:complexType>
-	
-	<xs:complexType name="Side">
-		<xs:sequence>
-			<xs:element name="richtext" type="RichText" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="RichText">
-		<xs:sequence>
 			<xs:element name="text" type="Text" />
 		</xs:sequence>
 	</xs:complexType>
-
+	
 	<xs:complexType name="Text">
 		<xs:attribute name="text" type="xs:string" />
 	</xs:complexType>
