@@ -9,7 +9,7 @@ import dev.dietermai.sailautil.dispatch.AbstractJob;
 import dev.dietermai.sailautil.dispatch.JobResult;
 import jakarta.xml.bind.JAXB;
 
-public class InitializeCards extends AbstractJob  {
+public class InitializeCards extends AbstractJob<JobResult>  {
 
 	private static final String CARDS_FILE_NAME = "cards.xml";
 

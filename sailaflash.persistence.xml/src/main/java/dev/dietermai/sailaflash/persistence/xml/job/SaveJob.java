@@ -6,7 +6,7 @@ import dev.dietermai.sailaflash.persistence.xml.file.CardsFile;
 import dev.dietermai.sailautil.dispatch.AbstractJob;
 import dev.dietermai.sailautil.dispatch.JobResult;
 
-public class SaveJob extends AbstractJob {
+public class SaveJob extends AbstractJob<JobResult> {
 
 	private static volatile LocalTime lastSave;
 	

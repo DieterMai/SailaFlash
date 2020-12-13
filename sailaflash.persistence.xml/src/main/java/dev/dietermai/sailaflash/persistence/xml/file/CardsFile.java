@@ -17,8 +17,6 @@ public enum CardsFile {
 	private File resource;
 	private Sailaflash model;
 	
-	private volatile boolean pendingSave;
-	
 	public void initialize(File resource, Sailaflash model) {
 		this.resource = resource;
 		this.model = model;

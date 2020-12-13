@@ -10,16 +10,17 @@ import dev.dietermai.sailaflash.persistence.xml.job.InitializeCards;
 import dev.dietermai.sailaflash.persistence.xml.job.SaveJob;
 import dev.dietermai.sailautil.dispatch.DebounceJob;
 import dev.dietermai.sailautil.dispatch.JobExecutor;
+import dev.dietermai.sailautil.dispatch.JobResult;
 
 public class XmlPersistenceFacade implements IPersistence{
 	// TODO the faced imple should only have accessor methods. It should not initialize fields
 	private JobExecutor executor;
 	
-	private DebounceJob saveTrigger;
+	private DebounceJob<JobResult> saveTrigger;
 	
 	public void initialize() {
 		executor = JobExecutor.createDefault();
-		saveTrigger = new DebounceJob(executor, new SaveJob(), Duration.ofSeconds(10));
+		saveTrigger = new DebounceJob<>(executor, new SaveJob(), Duration.ofSeconds(10));
 		
 	}
 	

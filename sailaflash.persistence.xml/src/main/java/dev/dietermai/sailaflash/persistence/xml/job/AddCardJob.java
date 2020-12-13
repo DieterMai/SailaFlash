@@ -5,7 +5,7 @@ import dev.dietermai.sailaflash.persistence.xml.file.CardsFile;
 import dev.dietermai.sailautil.dispatch.AbstractJob;
 import dev.dietermai.sailautil.dispatch.JobResult;
 
-public class AddCardJob extends AbstractJob{ // TODO
+public class AddCardJob extends AbstractJob<JobResult>{ // TODO
 
 	private final CardData cardData;
 	
