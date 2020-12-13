@@ -5,6 +5,4 @@ import dev.dietermai.sailaflash.api.persistence.IPersistence;
 public interface IPersistenceService extends IService {
 	
 	IPersistence getPersistence();
-
-	void shutdown();
 }

@@ -10,4 +10,5 @@ package dev.dietermai.sailaflash.api.service;
 public interface IService {
 	void initialize(String[] args);
 	void start();
+	void shutdown();
 }

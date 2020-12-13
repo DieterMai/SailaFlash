@@ -28,5 +28,8 @@ public class JavaFxUiService implements IUiService {
 		JfxBoot.instance.setBlService(blService);
 	}
 
-
+	@Override
+	public void shutdown() {
+		JfxBoot.instance.shutdown();
+	}
 }

@@ -3,6 +3,7 @@ package dev.dietermai.sailaflash.ui.jfx;
 import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.ui.jfx.app.JavaFxApplication;
 import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
+import javafx.application.Platform;
 
 public enum JfxBoot {
 	instance;
@@ -21,5 +22,8 @@ public enum JfxBoot {
 	public void setBlService(IBlService blService) {
 		PMI.pmi.set(IBlService.class, blService);
 	}
-	
+
+	public void shutdown() {
+		Platform.runLater(Platform::exit);
+	}
 }
