@@ -9,7 +9,7 @@ module dev.dietermai.sailaflash.ui.jfx {
 	exports dev.dietermai.sailaflash.ui.jfx.service;
 	exports dev.dietermai.sailaflash.ui.jfx.app;
 
-	requires dev.dietermai.sailaflash.api;
+	requires transitive dev.dietermai.sailaflash.api;
 	requires transitive javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;
