@@ -1,7 +1,8 @@
-package dev.dietermai.sailaflash.persistence.xml.spi;
+package dev.dietermai.sailaflash.persistence.xml;
 
 
 import java.time.Duration;
+import java.util.Objects;
 
 import dev.dietermai.sailaflash.api.model.CardData;
 import dev.dietermai.sailaflash.api.persistence.IPersistence;
@@ -17,6 +18,12 @@ public class XmlPersistenceFacade implements IPersistence{
 	private JobExecutor executor;
 	
 	private DebounceJob<JobResult> saveTrigger;
+	
+	public XmlPersistenceFacade(JobExecutor executor ) {
+		Objects.requireNonNull(executor);
+		
+		this.executor = executor;
+	}
 	
 	public void initialize() {
 		executor = JobExecutor.createDefault();

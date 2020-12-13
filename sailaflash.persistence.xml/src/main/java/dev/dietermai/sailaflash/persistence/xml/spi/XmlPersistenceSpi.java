@@ -2,6 +2,8 @@ package dev.dietermai.sailaflash.persistence.xml.spi;
 
 import dev.dietermai.sailaflash.api.persistence.IPersistence;
 import dev.dietermai.sailaflash.api.service.IPersistenceService;
+import dev.dietermai.sailaflash.persistence.xml.XmlPersistenceFacade;
+import dev.dietermai.sailautil.dispatch.JobExecutor;
 
 public class XmlPersistenceSpi implements IPersistenceService {
 
@@ -9,7 +11,8 @@ public class XmlPersistenceSpi implements IPersistenceService {
 	
 	@Override
 	public void initialize(String[] args) {
-		facade = new XmlPersistenceFacade();
+		JobExecutor executor = JobExecutor.createDefault();
+		facade = new XmlPersistenceFacade(executor);
 		facade.initialize();
 		facade.start();
 	}
