@@ -17,5 +17,13 @@
                 <text text="qqqeee"/>
             </answer>
         </simplecard>
+        <simplecard>
+            <question>
+                <text text="rrr"/>
+            </question>
+            <answer>
+                <text text="rrr"/>
+            </answer>
+        </simplecard>
     </cards>
 </sailaflash>

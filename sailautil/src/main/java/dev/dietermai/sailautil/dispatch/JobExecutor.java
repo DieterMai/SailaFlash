@@ -55,12 +55,7 @@ public class JobExecutor {
 
 	public void shutdown() {
 		if(!jobExecutor.isTerminated()) {
-			try {
-				jobExecutor.shutdown();
-				jobExecutor.awaitTermination(10, TimeUnit.SECONDS);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			jobExecutor.shutdown();
 		}
 	}
 }
