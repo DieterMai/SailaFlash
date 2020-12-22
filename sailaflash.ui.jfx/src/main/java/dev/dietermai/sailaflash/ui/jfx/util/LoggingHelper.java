@@ -20,4 +20,8 @@ public enum LoggingHelper {
 	public void dumpStageTree() {
 		NodeTreeDumper.dump(stage);
 	}
+	
+	public void dumpSceneTree() {
+		NodeTreeDumper.dump(scene);
+	}
 }

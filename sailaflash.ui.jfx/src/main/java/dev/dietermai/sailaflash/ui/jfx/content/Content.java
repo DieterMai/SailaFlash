@@ -1,8 +1,7 @@
 package dev.dietermai.sailaflash.ui.jfx.content;
 
-import dev.dietermai.sailaflash.ui.jfx.main.NavigationBar;
-import dev.dietermai.sailaflash.ui.jfx.main.Widget;
 import dev.dietermai.sailaflash.ui.jfx.main.NavigationBar.NavigationBarEntry;
+import dev.dietermai.sailaflash.ui.jfx.main.Widget;
 import dev.dietermai.sailaflash.ui.jfx.screen.ScreenSM;
 import javafx.beans.value.ObservableValue;
 

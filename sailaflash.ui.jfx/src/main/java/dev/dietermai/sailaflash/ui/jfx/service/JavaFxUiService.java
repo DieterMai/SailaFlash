@@ -5,7 +5,7 @@ package dev.dietermai.sailaflash.ui.jfx.service;
 
 import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.api.service.IUiService;
-import dev.dietermai.sailaflash.ui.jfx.JfxBoot;
+import dev.dietermai.sailaflash.ui.jfx.boot.JfxBoot;
 
 /**
  * @author Dieter

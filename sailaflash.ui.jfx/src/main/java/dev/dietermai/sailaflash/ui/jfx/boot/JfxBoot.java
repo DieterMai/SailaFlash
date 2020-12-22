@@ -1,4 +1,4 @@
-package dev.dietermai.sailaflash.ui.jfx;
+package dev.dietermai.sailaflash.ui.jfx.boot;
 
 import dev.dietermai.sailaflash.api.service.IBlService;
 import dev.dietermai.sailaflash.ui.jfx.app.JavaFxApplication;
