@@ -42,5 +42,7 @@ public class InitializeCards extends AbstractJob<JobResult>  {
 		var sailaflash = JAXB.unmarshal(file, Sailaflash.class);
 		CardsFile.cardsFile.initialize(file, sailaflash);
 		
+		
+		
 	}
 }

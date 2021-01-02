@@ -2,7 +2,7 @@ package dev.dietermai.sailaflash.ui.jfx.input;
 
 import static dev.dietermai.sailaflash.ui.jfx.inject.PMI.pmi;
 
-import dev.dietermai.sailaflash.api.model.CardData;
+import dev.dietermai.sailaflash.api.model.CardBody;
 import dev.dietermai.sailaflash.api.service.IBlService;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,6 +19,6 @@ public class SaveAction implements EventHandler<ActionEvent> {
 		
 		var bl = pmi.get(IBlService.class);
 		var cardStore = bl.getCardStore();
-		cardStore.createNewSimpleCard(new CardData(questionText, answerText));
+		cardStore.createNewSimpleCard(questionText, answerText);
 	}
 }

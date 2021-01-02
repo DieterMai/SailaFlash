@@ -1,7 +1,7 @@
 package dev.dietermai.sailaflash.ui.jfx.input;
 
-import static dev.dietermai.sailaflash.ui.jfx.inject.Keys.inputSaveButton;
 import static dev.dietermai.sailaflash.ui.jfx.inject.PMI.pmi;
+import static dev.dietermai.sailaflash.ui.jfx.inject.Keys.*;
 
 import javafx.scene.control.Button;
 

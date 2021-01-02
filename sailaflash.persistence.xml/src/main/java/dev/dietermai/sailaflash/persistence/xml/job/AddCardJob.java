@@ -1,15 +1,15 @@
 package dev.dietermai.sailaflash.persistence.xml.job;
 
-import dev.dietermai.sailaflash.api.model.CardData;
+import dev.dietermai.sailaflash.api.model.CardBody;
 import dev.dietermai.sailaflash.persistence.xml.file.CardsFile;
 import dev.dietermai.sailautil.dispatch.AbstractJob;
 import dev.dietermai.sailautil.dispatch.JobResult;
 
 public class AddCardJob extends AbstractJob<JobResult>{ // TODO
 
-	private final CardData cardData;
+	private final CardBody cardData;
 	
-	public AddCardJob(final CardData cardData) {
+	public AddCardJob(final CardBody cardData) {
 		this.cardData = cardData;
 	}
 	

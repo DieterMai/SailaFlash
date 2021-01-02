@@ -1,6 +1,8 @@
 package dev.dietermai.sailaflash.ui.jfx.main;
 
-import static dev.dietermai.sailaflash.ui.jfx.Constants.*;
+import static dev.dietermai.sailaflash.ui.jfx.Constants.COLOR_BackgroundContrast;
+import static dev.dietermai.sailaflash.ui.jfx.Constants.HIGHT_PREF_UPPERBUTTON;
+
 import dev.dietermai.sailaflash.ui.jfx.util.FxUtil;
 import javafx.geometry.Insets;
 import javafx.scene.Node;

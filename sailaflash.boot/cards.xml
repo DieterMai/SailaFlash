@@ -25,5 +25,21 @@
                 <text text="rrr"/>
             </answer>
         </simplecard>
+        <simplecard>
+            <question>
+                <text text="aaa"/>
+            </question>
+            <answer>
+                <text text="qqq"/>
+            </answer>
+        </simplecard>
+        <simplecard>
+            <question>
+                <text text="qqq"/>
+            </question>
+            <answer>
+                <text text="www"/>
+            </answer>
+        </simplecard>
     </cards>
 </sailaflash>

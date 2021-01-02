@@ -1,6 +1,6 @@
 package dev.dietermai.sailaflash.ui.jfx.input;
 
-import static dev.dietermai.sailaflash.ui.jfx.content.ContentConstants.CONTENT_screenBackground;
+import static dev.dietermai.sailaflash.ui.jfx.content.ContentConstants.*;
 
 import dev.dietermai.sailaflash.ui.jfx.inject.Keys;
 import dev.dietermai.sailaflash.ui.jfx.inject.PMI;
@@ -57,6 +57,7 @@ public class InputScreen implements IScreen {
 	
 	private Node createSaveSection() {
 		Button saveButton = new Button("Save and Next");
+		saveButton.setPrefSize(100, 30);
 		saveButton.setOnAction(PMI.pmi.get(SaveAction.class));
 		
 		PMI.pmi.set(Keys.inputSaveButton, saveButton);

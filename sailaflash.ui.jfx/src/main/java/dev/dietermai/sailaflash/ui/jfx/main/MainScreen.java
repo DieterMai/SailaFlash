@@ -1,9 +1,6 @@
 package dev.dietermai.sailaflash.ui.jfx.main;
 
-import static dev.dietermai.sailaflash.ui.jfx.Constants.COLOR_LowerSpace;
-import static dev.dietermai.sailaflash.ui.jfx.Constants.COLOR_UpperSpace;
-import static dev.dietermai.sailaflash.ui.jfx.Constants.CONENT_WIDTH;
-import static dev.dietermai.sailaflash.ui.jfx.Constants.CONTENT_INSETS;
+import static dev.dietermai.sailaflash.ui.jfx.Constants.*;
 
 import dev.dietermai.sailaflash.ui.jfx.content.Content;
 import dev.dietermai.sailaflash.ui.jfx.screen.IScreen;

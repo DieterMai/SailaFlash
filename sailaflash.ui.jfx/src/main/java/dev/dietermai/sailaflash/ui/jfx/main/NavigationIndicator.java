@@ -1,7 +1,7 @@
 package dev.dietermai.sailaflash.ui.jfx.main;
 
-import static dev.dietermai.sailaflash.ui.jfx.Constants.CONENT_WIDTH;
-import static dev.dietermai.sailaflash.ui.jfx.Constants.CONTENT_INSETS;
+import static dev.dietermai.sailaflash.ui.jfx.Constants.*;
+
 
 import dev.dietermai.sailaflash.ui.jfx.Constants;
 import dev.dietermai.sailaflash.ui.jfx.util.FxUtil;

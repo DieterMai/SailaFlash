@@ -2,7 +2,7 @@ package dev.dietermai.sailaflash.persistence.xml.file;
 
 import java.io.File;
 
-import dev.dietermai.sailaflash.api.model.CardData;
+import dev.dietermai.sailaflash.api.model.CardBody;
 import dev.dietermai.sailaflash.persistence.xml.node.Answer;
 import dev.dietermai.sailaflash.persistence.xml.node.ObjectFactory;
 import dev.dietermai.sailaflash.persistence.xml.node.Question;
@@ -30,7 +30,7 @@ public enum CardsFile {
 		JAXB.marshal(model, resource);
 	}
 	
-	public void addCard(final CardData cardData) {
+	public void addCard(final CardBody cardData) {
 		if(model == null) {
 			return; // TODO handle error
 		}

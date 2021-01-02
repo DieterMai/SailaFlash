@@ -4,7 +4,7 @@ package dev.dietermai.sailaflash.persistence.xml;
 import java.time.Duration;
 import java.util.Objects;
 
-import dev.dietermai.sailaflash.api.model.CardData;
+import dev.dietermai.sailaflash.api.model.CardBody;
 import dev.dietermai.sailaflash.api.persistence.IPersistence;
 import dev.dietermai.sailaflash.persistence.xml.job.AddCardJob;
 import dev.dietermai.sailaflash.persistence.xml.job.InitializeCards;
@@ -40,7 +40,7 @@ public class XmlPersistenceFacade implements IPersistence{
 	
 	
 	@Override
-	public void addCard(CardData cardData) {
+	public void addCard(CardBody cardData) {
 		executor.addJob(new AddCardJob(cardData));
 		saveTrigger.trigger();
 	}
